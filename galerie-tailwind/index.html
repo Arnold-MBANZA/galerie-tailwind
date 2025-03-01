@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS</title>
+  <!-- CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hero-bg {
+        background-image: url('https://images.unsplash.com/photo-1580094333632-438bdc04f79f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    }
+    .contact-bg {
+      background-image: url('https://images.unsplash.com/photo-1520942702018-0862200e6873?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+</style>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="bg-gray-800 bg-opacity-75 fixed w-full z-10">
+  <div class="max-w-7xl mw-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center">
+        <div class="flex-shrink-0">
+          <img src="./Logo-02.png" alt="Logo" class="h-8 w-8">
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Destination</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Offres</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="mr-2 flex md:hidden">
+      <button class="button bg-white inline-flex items-center justify-center p-2 rounded-md hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" id="menu-button">
+        <box-icon name='menu' class="h-6 w-6 menu-icon"></box-icon>
+        <box-icon name='x' class="h-6 w-6 close-icon hidden"></box-icon>
+      </button>
+      </div>
+    </div>
+  </div>
+  <div class="md:hidden hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Destination</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Offres</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative h-screen flex justify-center items-center hero-bg bg-fixed bg-center bg-cover">
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+  <div class="relative flex flex-col justify-center items-center text-center p-6">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">
+      Découvrez le monde avec nous
+    </h1>
+    <p class="text-lg md:text-2xl mb-8 text-white">
+      Voyagez vers des destinations de rêve avec des offres incroyables
+    </p>
+    <button class="bg-red-500 text-white px-6 h-12 rounded-full font-semibold animate-pulse">
+      Réservez maintenant
+    </button>
+  </div>
+</section>
+
+<section class="w-full max-w-[1200px] m-auto p-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Card 1 -->
+    <div class="relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all">
+      <img src="https://images.unsplash.com/photo-1619546952812-520e98064a52?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image 1" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold mb-2">Title 1</h2>
+        <p class="text-gray-700 mb-4">Je suis une description de l'image 1</p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Action</button>
+      </div> 
+      <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-md">100$</div>
+    </div>
+
+    <!-- Répétez les cartes 2 à 6 avec le même code que ci-dessus -->
+    <!-- Card 2 -->
+    <div class="relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all">
+      <img src="https://images.unsplash.com/photo-1559562591-6de6f7187f56?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image 1" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold mb-2">Title 2</h2>
+        <p class="text-gray-700 mb-4">Je suis une description de l'image 2</p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Action</button>
+      </div> 
+      <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-md">100$</div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all">
+      <img src="https://images.unsplash.com/photo-1533241818630-edad657eb3da?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image 1" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold mb-2">Title 3</h2>
+        <p class="text-gray-700 mb-4">Je suis une description de l'image 2</p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Action</button>
+      </div> 
+      <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-md">100$</div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all">
+      <img src="https://plus.unsplash.com/premium_photo-1680173741759-193a79e8e7d6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image 1" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold mb-2">Title 4</h2>
+        <p class="text-gray-700 mb-4">Je suis une description de l'image 2</p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Action</button>
+      </div> 
+      <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-md">100$</div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all">
+      <img src="https://images.unsplash.com/photo-1583366505390-6770035a9dd0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image 1" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold mb-2">Title 5</h2>
+        <p class="text-gray-700 mb-4">Je suis une description de l'image 2</p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Action</button>
+      </div> 
+      <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-md">100$</div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="relative bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all">
+      <img src="https://images.unsplash.com/photo-1583415909301-9dfc72accb32?q=80&w=1388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image 1" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold mb-2">Title 6</h2>
+        <p class="text-gray-700 mb-4">Je suis une description de l'image 2</p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Action</button>
+      </div> 
+      <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-md">100$</div>
+    </div>    
+  </div>
+</section>
+
+<!-- Info -->
+ <section class="bg-slate-500 text-white">
+  <div class="container mx-auto px-4 py-4">
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+      <div class="order-1 md:order-2">
+        <img src="https://plus.unsplash.com/premium_photo-1680249637186-b98023e76504?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image" class="w-full h-auto rounded-lg shadow-lg">
+      </div>
+<div class="order-1 md:order-2">
+  <h2 class="text-4xl text-red-600 uppercase font-black mb-2">
+    A propos
+  </h2>
+  <p class="text-lg mb-4 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus exercitationem quae voluptates. Quia commodi nulla asperiores reprehenderit laudantium at vel quidem laboriosam, modi inventore, ducimus vero. Aut ea deleniti iure.</p>
+  <p class="text-lg mb-4 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus exercitationem quae voluptates. Quia commodi nulla asperiores reprehenderit laudantium at vel quidem laboriosam, modi inventore, ducimus vero. Aut ea deleniti iure.</p>
+  <button class="bg-red-500 text-white px-6 h-12 rounded-full font-semibold animate-pulse">
+    En savoir plus
+  </button>
+</div>
+    </div>
+  </div>
+ </section>
+
+<!-- Contact -->
+
+<section class="px-4 py-12 contact-bg bg-fixed bg-center bg-cover">
+<div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg bg-opacity-25">
+  <h2 class="text-4xl text-red-600 uppercase font-black mb-2 text-center">
+    Contactez-nous
+  </h2>
+  <p class="text-lg text-gray-600 text-center mb-12">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+<form action="#" class="space-y-6">
+  <div>
+    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+    <input type="text" id="name" class="mt-1 block w-full p-3 boerder-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500">
+  </div>
+  <div>
+    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+    <input type="text" id="email" class="mt-1 block w-full p-3 boerder-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500">
+  </div>
+  <div>
+    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+    <textarea id="message" class="mt-1 block w-full p-3 boerder-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"></textarea>
+  </div>
+  <div class="text-center">
+    <button type="submit" class="w-full md:w-auto inline-flex justify-center py-3 px-6 border-transparent shadow-sm text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">Envoyer</button>
+  </div>
+</form>
+</div>
+</section>
+
+<!-- Footer -->
+ <footer class="bg-gray-900 text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4">Contactez-nous</h3>
+        <p class="text-gray-400">Adresse: Av. Dr. Cristiano Guimarães, 2127 - Planalto, Belo Horizonte, Brazil 31720-300</p>
+        <p class="text-gray-400">Téléphone: +55 31 3490-1000</p>
+        <p class="text-gray-400">Email: discovery@gmail.com</p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold mb-4">Liens Utiles</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white">Accueil</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">A propos</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Suivez-nous</h3>
+        <div class="flex space-x-4">
+        <a href="#" class="bg-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-400"><box-icon type='logo' name='instagram-alt'></box-icon></a>
+        <a href="#" class="bg-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-400"><box-icon name='facebook-square' type='logo' ></box-icon></a>
+        <a href="#" class="bg-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-400"><box-icon name='linkedin' type='logo' ></box-icon></a>
+      </div>
+      </div>
+    </div>
+    <div class="text-center text-gray-400 mt-8">
+      &copy; 2025 Discovery. Tous droits réservés.
+    </div>
+  </div>
+ </footer>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script src="app.js"></script>
+  
+</body>
+</html>
